@@ -1,5 +1,5 @@
 import pika
-from rabbit_connection import parameters_rabbit
+from utils.rabbit_connection import parameters_rabbit
 
 connection = pika.BlockingConnection(parameters_rabbit)
 channel = connection.channel()

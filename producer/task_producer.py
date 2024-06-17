@@ -1,6 +1,6 @@
 import pika
 import uuid
-from rabbit_connection import parameters_rabbit
+from utils.rabbit_connection import parameters_rabbit
 
 
 def callback(ch, method, properties, body):
