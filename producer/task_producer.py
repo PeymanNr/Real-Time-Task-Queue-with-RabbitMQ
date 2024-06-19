@@ -1,13 +1,13 @@
 import pika
 import uuid
-from utils.rabbit_connection import parameters_rabbit
+from utils.rabbit_connection import rabbit_connection
 
 
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body.decode('utf-8'))
 
 
-connection = pika.BlockingConnection(parameters_rabbit)
+connection = rabbit_connection
 channel = connection.channel()
 
 request_queue = 'request_queue'

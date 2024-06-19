@@ -1,7 +1,7 @@
 import pika
-from utils.rabbit_connection import parameters_rabbit
+from utils.rabbit_connection import rabbit_connection
 
-connection = pika.BlockingConnection(parameters_rabbit)
+connection = rabbit_connection
 channel = connection.channel()
 
 queue_name = 'request_queue'
@@ -24,3 +24,4 @@ channel.basic_consume(queue=queue_name, on_message_callback=callback)
 
 print(' [*] Waiting for requests. To exit, press CTRL+C')
 channel.start_consuming()
+
