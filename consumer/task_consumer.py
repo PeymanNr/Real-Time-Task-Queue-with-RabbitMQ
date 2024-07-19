@@ -13,7 +13,9 @@ def callback(ch, method, properties, body):
     channel.basic_publish(
         exchange='',
         routing_key=properties.reply_to,
-        properties=pika.BasicProperties(correlation_id=properties.correlation_id),
+        properties=pika.BasicProperties(
+            correlation_id=properties.correlation_id
+        ),
         body=response.encode('utf-8'))
 
     ch.basic_ack(delivery_tag=method.delivery_tag)
@@ -21,7 +23,6 @@ def callback(ch, method, properties, body):
 
 channel.queue_declare(queue=queue_name)
 channel.basic_consume(queue=queue_name, on_message_callback=callback)
-
 print(' [*] Waiting for requests. To exit, press CTRL+C')
 channel.start_consuming()
 
