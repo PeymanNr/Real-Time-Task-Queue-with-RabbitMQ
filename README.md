@@ -7,15 +7,9 @@ This project demonstrates a real-time task queue system using RabbitMQ and Pytho
 ## Project Structure 📁
 ```python
 real_time_task_queue/
-├── producer/
-│ ├── init.py
-│ ├── task_producer.py
-├── consumer/
-│ ├── init.py
-│ ├── task_consumer.py
-├── utils/
-│ ├── init.py
-│ ├── rabbitmq_connection.py
+├── task_producer.py 
+├── task_consumer.py
+├── connection.py
 ├── config.py
 ├── requirements.txt
 ├── README.md
