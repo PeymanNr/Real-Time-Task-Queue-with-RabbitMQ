@@ -1,6 +1,6 @@
 import pika
 import uuid
-from utils.rabbit_connection import rabbit_connection
+from connection import rabbit_connection
 
 
 connection = rabbit_connection

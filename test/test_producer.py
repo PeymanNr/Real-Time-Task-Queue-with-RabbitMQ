@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, Mock
-from producer.task_producer import callback
+from task_producer import callback
 
 
 class TestProducer(unittest.TestCase):

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 import pika
-from consumer.task_consumer import callback
+from task_consumer import callback
 
 
 class TestConsumer(unittest.TestCase):

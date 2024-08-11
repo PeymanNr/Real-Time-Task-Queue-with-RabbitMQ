@@ -1,4 +1,4 @@
-from utils.rabbit_connection import rabbit_connection
+from connection import rabbit_connection
 
 connection = rabbit_connection
 channel = connection.channel()
